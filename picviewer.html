@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        
+        <title>document</title>
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        
+    </head>
+    <body>
+      <table border="1">
+          <tr align="center"><td colspan="2"><img src="img7.jpg" id="image" height="300px" width="400px"></td></tr>
+            <tr>
+                <td width=50% align="center">
+                    <button type="button" id="bp">Previous</button>
+                </td>
+                <td width=50% align="center">
+                    <button type="button" id="bn">Next</button>
+                </td>
+            </tr>
+          
+      </table>
+    <!--  <script type="text/javascript" src="picview.js"></script>  -->
+        
+    </body>
+    <Script>
+     //  var img=$("#image");
+
+var imgs=["img7.jpg","img8.jpg","img10.jpg"];
+var count=0;
+
+  //can also pass the whole next() function i.e function body
+
+$(document).ready(
+    function(){
+        $("#bp").click(
+            function(){
+                previous();
+            }
+        );
+    }
+);
+
+$(document).ready(
+    function(){
+        $("#bn").click(
+            function(){
+                next();
+            }
+        );
+    }
+);
+
+function next(){
+    if(count==imgs.length-1){
+        count=-1;
+    }
+ count++;
+ $("#image").attr("src",imgs[count]);
+}
+
+function previous(){
+    if(count==0){
+        count=imgs.length;
+    }
+    count--;
+    $("#image").attr("src",imgs[count]);
+}
+
+
+    </Script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        
+        <title>document</title>
+        
+    </head>
+    <body>
+        <h1>Hello...</h1>
+        <h1>Hello...</h1>
+        <h1>Hello...</h1>
+        <h1>Hello...</h1>
+        <button type="button" onclick="test()">Show/Hide</button>
+        <button type="button" onclick="test2()">Toggle</button>
+    </body>
+    <script>
+        function test(){
+            $("h1").fadeToggle(5000);
+        }
+        function test2(){
+            $("h1").toggle(5000);
+        }
+    
+    </script>
+
+       
+        <script src="jquery.js" type="text/javascript"></script>
+    
+    </html>
